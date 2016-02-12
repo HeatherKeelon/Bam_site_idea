@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bamApp">
+<head>
+    <meta charset="UTF-8">
+    <title>BAM Automotive</title>
+    <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css.map"/>
+    <link rel="stylesheet" href="/styles/styles.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:600|Orbitron:700|Vollkorn' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <header id="header">
+        <nav id="nav">
+            <ul>
+                <li><a href="#home" class="active" title="Next Section">Home</a></li>
+                <li><a href="#about" title="Next Section">About Us</a></li>
+                <li><a href="#contact" title="Next Section">Contact Us</a></li>
+                <li><a href="#find" title="Next Section">Find Us</a></li>
+                <li><a href="#review" title="Next Section">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home">
+        <div class="content">
+
+            <div class="bam-log-box">
+                <img class="bam-logo" src="/images/alteredlogo.png" alt="BAM Logo"/>
+            </div>
+
+            <div class="home-text">
+            <div class="phone">
+                <button type="button" class="btn btn-default btn-lg bam-button">
+                    <span class="glyphicon glyphicon-earphone"></span>
+                </button>
+                <span>952-591-5855</span>
+            </div>
+
+            <div class="facebook">
+                <button type="button" class="btn btn-default btn-lg bam-button"><a href="https://www.facebook.com/bamautomotive/">
+                    <span class="glyphicon glyphicon-comment"></span>
+                </a></button>
+                <span>Find Us On Facebook</span>
+            </div>
+
+            <div class="location">
+                <button type="button" class="btn btn-default btn-lg bam-button"><a href="https://www.google.com/maps/dir//BAM+Automotive,+2835+Hedberg+Dr,+Minnetonka,+MN+55305/@44.949604,-93.418927,15z/data=!4m12!1m3!3m2!1s0x0:0x7dc1253d43b49939!2sBAM+Automotive!4m7!1m0!1m5!1m1!1s0x52b34aaaa92b3fb7:0x7dc1253d43b49939!2m2!1d-93.418927!2d44.949604">
+                    <span class="glyphicon glyphicon-map-marker"></span>
+                </a></button>
+                <span>2835 Hedberg Drive, Minnetonka, Minnesota</span>
+            </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="find">
+        <div class="content">
+          <div class="find-box">
+            <div class="find-box-left">
+              <div class="find-box-left-top">
+                <div class="find-logo">
+                  <img src="/images/BAMWords.png" alt="BAM Logo"/>
+                </div>
+              </div>
+              <div class="find-box-left-bottom">
+                <h2>Need a Ride?</h2>
+                <p>We know that taking your car to the shop can throw your usual transportation routine out of wack.
+                  To make sure you get to where you need to be, we are happy to offer rides to home and work while your
+                  car is being worked on.</p>
+              </div>
+            </div>
+            <div class="find-box-right">
+              <div class="find-box-right-top">
+                <div class="directions-box">
+                  <h2>Our Location</h2>
+                  <p>BAM Automotive is located near the intersection of Hopkins Crossroads and Cedar Lake Rd. on Hedberg Drive West of highway 169.
+                      You can access our location on Google Maps <a href="https://www.google.com/maps/dir//BAM+Automotive,+2835+Hedberg+Dr,+Minnetonka,+MN+55305/@44.949604,-93.418927,15z/data=!4m12!1m3!3m2!1s0x0:0x7dc1253d43b49939!2sBAM+Automotive!4m7!1m0!1m5!1m1!1s0x52b34aaaa92b3fb7:0x7dc1253d43b49939!2m2!1d-93.418927!2d44.949604">here</a>.</p>
+                </div>
+              </div>
+              <div class="find-box-right-bottom">
+                  <img src="images/bammap.png" alt="BAM Map" class="bam-map"/>
+              </div>
+            </div>
+              </div>
+            </div>
+            <div class="bottom-triangle"></div>
+          </div>
+
+    <div id="contact">
+      <h2 class="contact-welcome">Contact</h2>
+      <br>
+      <br>
+      <form class="form-horizontal" action="/newmessage" id="messageForm">
+        <div class="form-group">
+          <label for="name" class="col-md-1 col-xs-2 control-label">Your Name</label>
+          <div class="col-md-5 col-xs-10">
+            <input type="text" class="form-control" id="name" placeholder="Name"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="col-md-1 col-xs-2 control-label">Email</label>
+          <div class="col-md-5 col-xs-10">
+            <input type="email" class="form-control" id="email" placeholder="Email"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject" class="col-md-1 col-xs-2 control-label">Subject</label>
+          <div class="col-md-5 col-xs-10">
+            <input type="subject" class="form-control" id="email" placeholder="Subject"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message" class="col-md-1 col-xs-2 control-label">Message</label>
+          <div class="col-md-5 col-xs-10">
+            <textarea class="form-control" id="message" rows="4"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-offset-1 col-md-5 col-xs-offset-2 col-xs-10" id="submit-box">
+            <button type="submit" class="btn btn-default submit-button">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+    <div id="about">
+        <div class="content">
+            <div class="mission">
+                <h3>This is the BAM Automotive Mission Statement</h3>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="staff">
+                <h3>This is Austin</h3>
+                <img src="http://fillmurray.com/g/200/200">
+                <p>This is about Austin</p>
+            </div>
+            <div class="staff">
+                <h3>This is Brady</h3>
+                <img src="http://fillmurray.com/g/200/200">
+                <p>This is about Brady</p>
+            </div>
+            <div class="staff">
+                <h3>This is Bill</h3>
+                <img src="http://fillmurray.com/g/200/200">
+                <p>This is about Bill.</p>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="/vendors/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/assets/app.js"></script>
+
+</body>
+</html>
