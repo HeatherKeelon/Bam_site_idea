@@ -92,37 +92,49 @@
       <h2 class="contact-welcome">Contact</h2>
       <br>
       <br>
-      <form class="form-horizontal">
-        <div class="form-group">
-          <label for="name" class="col-md-1 col-xs-2 control-label">Your Name</label>
-          <div class="col-md-5 col-xs-10">
-            <input type="text" class="form-control" id="name" placeholder="Name"/>
+      <div class="contact-frame">
+          <div class="contact-left">
+              <form class="form-horizontal" id="messageForm">
+                <div class="form-group">
+                  <label for="name" class="col-md-1 col-xs-2 control-label">Your Name</label>
+                  <div class="col-md-5 col-xs-10">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Name"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="col-md-1 col-xs-2 control-label">Email</label>
+                  <div class="col-md-5 col-xs-10">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="subject" class="col-md-1 col-xs-2 control-label">Subject</label>
+                  <div class="col-md-5 col-xs-10">
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="messageArea" class="col-md-1 col-xs-2 control-label">Message</label>
+                  <div class="col-md-5 col-xs-10">
+                    <textarea class="form-control" id="messageArea" rows="4" name="message"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-offset-1 col-md-5 col-xs-offset-2 col-xs-10" id="submitBox">
+                    <button type="submit" class="btn btn-default submit" id="submitButton">Submit</button>
+                  </div>
+                </div>
+              </form>
           </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-md-1 col-xs-2 control-label">Email</label>
-          <div class="col-md-5 col-xs-10">
-            <input type="email" class="form-control" id="email" placeholder="Email"/>
+          <div class="contact-right">
+              <div class="facebook-phone">
+                  <h3>Contact Us On Facebook</h3>
+                  <p>BAM encourages customers to leave comments and questions on our Facebook page as well. We update our status weekly, and offer tips and tricks on taking care of your vehicle so that it performs at its peak.</p>
+                  <h3>Phone Calls Accepted</h3>
+                  <p>Reach us at: 952-591-5855</p>
+              </div>
           </div>
-        </div>
-        <div class="form-group">
-          <label for="subject" class="col-md-1 col-xs-2 control-label">Subject</label>
-          <div class="col-md-5 col-xs-10">
-            <input type="subject" class="form-control" id="email" placeholder="Subject"/>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="message" class="col-md-1 col-xs-2 control-label">Message</label>
-          <div class="col-md-5 col-xs-10">
-            <textarea class="form-control" id="message" rows="4"></textarea>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-md-offset-1 col-md-5 col-xs-offset-2 col-xs-10" id="submit-box">
-            <button type="submit" class="btn btn-default submit-button">Submit</button>
-          </div>
-        </div>
-      </form>
+      </div>
     </div>
 
 

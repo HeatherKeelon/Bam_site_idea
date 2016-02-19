@@ -1,6 +1,22 @@
 $(document).ready(function() {
-  $('#messageForm').submit(function(){
-    
+
+  $('#submitBox').on('click', '.submit', function(event){
+      console.log("You clicked submit!");
+
+      $.each($('#messageForm').serializeArray(), function(i, field){
+        toBeSent[field.name]=field.value;
+      });
+      console.log("To Be Sent", toBeSent);
+
+      $('#messageForm').find('input[type=text]').val('');
+      $('#messageForm').find('input[type=email]').val('');
+      $('#messageArea').val('');
+
+      postToServer(toBeSent);
+
+      alert("Your message has been sent.");
+
+      event.preventDefault();
   });
 //    function filterPath(string) {
 //        return string
@@ -49,3 +65,26 @@ $(document).ready(function() {
 //    }
 //
 });
+
+var toBeSent = {};
+
+function submitMessage(){
+    console.log("empty");
+}
+
+
+
+function postToServer() {
+    $.ajax({
+        type: 'POST',
+        url: '/newmessage',
+        data: toBeSent,
+        beforeSend: function () {
+            console.log("Going to server");
+        },
+        success: function postMessage(data) {
+            console.log("This was sent: ", data);
+        }
+    })
+}
+

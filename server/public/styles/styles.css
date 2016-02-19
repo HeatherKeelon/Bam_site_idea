@@ -200,3 +200,42 @@ body {
 .contact-welcome {
   font-family: "Orbitron", sans-serif;
 }
+
+.contact-frame {
+    width: 100%;
+    display: inline-block;
+}
+
+.contact-left {
+    width: 45%;
+    float: left;
+    padding-left: 10px;
+}
+
+#messageArea, #subject, #name, #email {
+    width: 200%;
+    margin-left: 20px;
+}
+
+.submit {
+    margin-left: 20px;
+}
+
+.contact-right {
+    width: 45%;
+    float: right;
+    background-color: #54aca5;
+    position: relative;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+.contact-right h3 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+
+
+
+
