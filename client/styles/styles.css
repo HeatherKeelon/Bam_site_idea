@@ -16,6 +16,7 @@ body {
 .content {
     margin: 0 auto;
     width: 960px;
+    height: 100%;
 }
 
 .clear {
@@ -59,7 +60,6 @@ body {
 
 #home, #about {
     width: 100%;
-    height: 100%;
 }
 
 #home {
@@ -90,6 +90,15 @@ body {
   min-height: 100%;
   width: 100%;
   color: white;
+}
+
+#about {
+    background-color: white;
+    margin: 0;
+    overflow: hidden;
+    min-height: 100%;
+    position: relative;
+
 }
 
 .bam-button {
@@ -232,6 +241,68 @@ body {
 
 .contact-right h3 {
     font-family: 'Orbitron', sans-serif;
+}
+
+.about-triangle {
+    width: 0;
+    height: 0;
+    border-left: 700px solid transparent;
+    border-right: 700px solid transparent;
+    border-top: 100px solid black;
+    position: absolute;
+    top: 0;
+}
+
+.mission {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 250px;
+    text-align: center;
+}
+
+.mission h3 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.mission p {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.staff-box {
+    width: 100%;
+}
+
+.staff-box h3 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.staff {
+    width: 30%;
+    float: left;
+    margin: 1.5%;
+    text-align: center;
+}
+
+.staff img {
+    border-radius: 50%;
+}
+
+.staff img:hover {
+    position: relative;
+    top: -5px;
+    padding-bottom: 5px;
+}
+
+.staff-button {
+    border-radius: 50%;
+    background-color: white;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 

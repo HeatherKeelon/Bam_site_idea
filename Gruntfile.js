@@ -50,6 +50,7 @@ module.exports = function (grunt) {
                     //"angular-ui-grid/ui-grid.min.js",
                     "bootstrap/dist/css/bootstrap.min.css",
                     "bootstrap/dist/css/bootstrap.min.css.map",
+                    "bootstrap/js/modal.js",
                     "bootstrap/dist/fonts/glyphicons-halflings-regular.woff2",
                     "bootstrap/dist/fonts/glyphicons-halflings-regular.woff",
                     "bootstrap/dist/fonts/glyphicons-halflings-regular.ttf"

@@ -18,6 +18,11 @@ $(document).ready(function() {
 
       event.preventDefault();
   });
+
+    //$('#billStaff').on('click', '.staff-button', function(){
+    //    console.log("Modal button pushed");
+    //    $('#austinModal').modal('toggle');
+    //});
 //    function filterPath(string) {
 //        return string
 //            .replace(/^\//,'')
