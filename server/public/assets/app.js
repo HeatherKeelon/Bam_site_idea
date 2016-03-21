@@ -19,6 +19,45 @@ $(document).ready(function() {
       event.preventDefault();
   });
 
+    pullReviews();
+
+    $('#nav').on('click', '.review-button', function(){
+      $.smoothScroll({
+        scrollTarget: '#review'
+      });
+      return false;
+    });
+
+    $('#nav').on('click', '.about-button', function(){
+      $.smoothScroll({
+        scrollTarget: '#about'
+      });
+      return false;
+    });
+
+    $('#nav').on('click', '.home-button', function(){
+      $.smoothScroll({
+        scrollTarget: '#home'
+      });
+      return false;
+    });
+
+    $('#nav').on('click', '.contact-button', function(){
+      $.smoothScroll({
+        scrollTarget: '#contact'
+      });
+      return false;
+    });
+
+    $('#nav').on('click', '.find-button', function(){
+      $.smoothScroll({
+        scrollTarget: '#find'
+      });
+      return false;
+    });
+
+
+
     //$('#billStaff').on('click', '.staff-button', function(){
     //    console.log("Modal button pushed");
     //    $('#austinModal').modal('toggle');
@@ -50,7 +89,7 @@ $(document).ready(function() {
 //        }
 //    });
 //
-//    // use the first element that is "scrollable"
+// //    // use the first element that is "scrollable"
 //    function scrollableElement(els) {
 //        for (var i = 0, argLength = arguments.length; i <argLength; i++) {
 //            var el = arguments[i],
@@ -68,7 +107,7 @@ $(document).ready(function() {
 //        }
 //        return [];
 //    }
-//
+
 });
 
 var toBeSent = {};
@@ -93,3 +132,44 @@ function postToServer() {
     })
 }
 
+function pullReviews() {
+    $.ajax({
+        type: 'GET',
+        url: '/data/review.json',
+        success: function(data) {
+            console.log("GET success");
+            console.log("This is data", data);
+            setCarousel(data.bam);
+        }
+    });
+}
+
+function setCarousel(reviews) {
+    var increment = 0;
+    console.log("This is reviews", reviews);
+    var i = 0;
+
+
+        for (i = 0; i < reviews.length; i++) {
+            var $el = $('.review-carousel').children().last();
+            setTimeout(function () {
+                $('.review-carousel').fadeOut(200, function () {
+                    $('.review-carousel').empty();
+                    $('.review-carousel').append('<h4 class="review-text">"' + reviews[increment]["review"] + '"</h4>').hide().fadeIn();
+                    increment++;
+                    if (increment>reviews.length-1) {
+                        setTimeout(function() {
+                            resetCarousel(reviews);
+                        }, 5000);
+                    }
+                });
+            }, 5000 * i);
+        }
+
+}
+
+
+function resetCarousel(reviews) {
+    console.log("Reset Carousel hit.");
+    setCarousel(reviews);
+}

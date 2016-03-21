@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css.map"/>
     <link rel="stylesheet" href="/styles/styles.css"/>
     <link href='https://fonts.googleapis.com/css?family=Exo+2:600|Orbitron:700|Vollkorn' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
     <header id="header">
         <nav id="nav">
             <ul>
-                <li><a href="#home" class="active" title="Next Section">Home</a></li>
-                <li><a href="#about" title="Next Section">About Us</a></li>
-                <li><a href="#contact" title="Next Section">Contact Us</a></li>
-                <li><a href="#find" title="Next Section">Find Us</a></li>
-                <li><a href="#review" title="Next Section">Reviews</a></li>
+                <li class="home-button">Home</li>
+                <li class="find-button">Find Us</li>
+                <li class="contact-button">Contact Us</li>
+                <li class="about-button">About Us</li>
+                <li class="review-button">Reviews</li>
             </ul>
         </nav>
     </header>
@@ -31,21 +32,21 @@
             <div class="home-text">
             <div class="phone">
                 <button type="button" class="btn btn-default btn-lg bam-button">
-                    <span class="glyphicon glyphicon-earphone"></span>
+                    <i class="fa fa-phone-square"></i>
                 </button>
                 <span>952-591-5855</span>
             </div>
 
             <div class="facebook">
                 <button type="button" class="btn btn-default btn-lg bam-button"><a href="https://www.facebook.com/bamautomotive/">
-                    <span class="glyphicon glyphicon-comment"></span>
+                    <i class="fa fa-facebook-official"></i>
                 </a></button>
                 <span>Find Us On Facebook</span>
             </div>
 
             <div class="location">
                 <button type="button" class="btn btn-default btn-lg bam-button"><a href="https://www.google.com/maps/dir//BAM+Automotive,+2835+Hedberg+Dr,+Minnetonka,+MN+55305/@44.949604,-93.418927,15z/data=!4m12!1m3!3m2!1s0x0:0x7dc1253d43b49939!2sBAM+Automotive!4m7!1m0!1m5!1m1!1s0x52b34aaaa92b3fb7:0x7dc1253d43b49939!2m2!1d-93.418927!2d44.949604">
-                    <span class="glyphicon glyphicon-map-marker"></span>
+                    <i class="fa fa-map-marker"></i>
                 </a></button>
                 <span>2835 Hedberg Drive, Minnetonka, Minnesota</span>
             </div>
@@ -80,7 +81,7 @@
                 </div>
               </div>
               <div class="find-box-right-bottom">
-                  <img src="images/bammap.png" alt="BAM Map" class="bam-map"/>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11294.83193125933!2d-93.418927!3d44.949604!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7dc1253d43b49939!2sBAM+Automotive!5e0!3m2!1sen!2sus!4v1458325551505" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
               </div>
             </div>
               </div>
@@ -89,44 +90,44 @@
           </div>
 
     <div id="contact">
-      <h2 class="contact-welcome">Contact</h2>
+      <h2 class="contact-welcome col-md-offset-1">Contact</h2>
       <br>
       <br>
-      <div class="contact-frame">
-          <div class="contact-left">
-              <form class="form-horizontal" id="messageForm">
+      <div class="contact-frame row">
+          <div class="contact-left col-md-offset-1 col-md-4">
+              <form class="form-horizontal col-md-4" id="messageForm">
                 <div class="form-group">
-                  <label for="name" class="col-md-1 col-xs-2 control-label">Your Name</label>
-                  <div class="col-md-5 col-xs-10">
+                  <label for="name" class="control-label">Your Name</label>
+                  <div>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Name"/>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="email" class="col-md-1 col-xs-2 control-label">Email</label>
-                  <div class="col-md-5 col-xs-10">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email"/>
+                  <label for="email" class="control-label">Email</label>
+                  <div>
+                    <input type="email" class="form-control writing" id="email" name="email" placeholder="Email"/>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="subject" class="col-md-1 col-xs-2 control-label">Subject</label>
-                  <div class="col-md-5 col-xs-10">
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"/>
+                  <label for="subject" class="control-label">Subject</label>
+                  <div>
+                    <input type="text" class="form-control writing" id="subject" name="subject" placeholder="Subject"/>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="messageArea" class="col-md-1 col-xs-2 control-label">Message</label>
-                  <div class="col-md-5 col-xs-10">
-                    <textarea class="form-control" id="messageArea" rows="4" name="message"></textarea>
+                  <label for="messageArea" class="control-label">Message</label>
+                  <div>
+                    <textarea class="form-control writing" id="messageArea" rows="4" name="message">What do you want to tell us?</textarea>
                   </div>
                 </div>
                 <div class="form-group">
-                  <div class="col-md-offset-1 col-md-5 col-xs-offset-2 col-xs-10" id="submitBox">
+                  <div id="submitBox">
                     <button type="submit" class="btn btn-default submit" id="submitButton">Submit</button>
                   </div>
                 </div>
               </form>
           </div>
-          <div class="contact-right">
+          <div class="contact-right col-md-4">
               <div class="facebook-phone">
                   <h3>Contact Us On Facebook</h3>
                   <p>BAM encourages customers to leave comments and questions on our Facebook page as well. We update our status weekly, and offer tips and tricks on taking care of your vehicle so that it performs at its peak.</p>
@@ -140,6 +141,7 @@
 
     <div id="about">
         <div class="about-triangle"></div>
+        <div class="about-triangle-bottom"></div>
         <div class="content">
             <div class="mission">
                 <h3>Mission</h3>
@@ -150,72 +152,98 @@
         <div class="content">
             <div class="staff-box">
                 <h3>BAM Staff</h3>
-                <div class="staff">
-                    <button type="button" class="staff-button" data-toggle="modal" data-target="#austinModal"><img src="http://fillmurray.com/g/200/200"></button>
-                    <h3>Austin</h3>
-                </div>
-                <div class="modal fade" id="austinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="austinModalLabel">Austin</h4>
+                <div class="staff-row row">
+                    <div class="staff col-md-4">
+                        <button type="button" class="staff-button" data-toggle="modal" data-target="#austinModal"><img src="http://fillmurray.com/g/200/200"></button>
+                        <h3 class="staff-name">Austin</h3>
+                    </div>
+                    <div class="modal fade" id="austinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="austinModalLabel">Austin</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Austin is the owner of BAM Automotive.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                                <p>Austin is the owner of BAM Automotive.</p>
+                        </div>
+                    </div>
+                    <div class="staff col-md-4">
+                        <button class="staff-button" type="button" data-toggle="modal" data-target="#bradyModal"><img src="http://fillmurray.com/g/200/200"></button>
+                        <h3 class="staff-name">Brady</h3>
+                    </div>
+                    <div class="modal fade" id="bradyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="bradyModalLabel">Brady</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Brady is a master tech who loves talking to customers. His specialty is Nissan repairs.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    <div class="staff col-md-4" id="billStaff">
+                        <button type="button" class="staff-button" data-toggle="modal" data-target="#billModal"><img src="http://fillmurray.com/g/200/200"></button>
+                        <h3 class="staff-name">Bill</h3>
+                    </div>
+                    <div class="modal fade" id="billModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="billModalLabel">Bill</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Bill works at BAM Automotive and he has been an auto tech for more than 30 years. He specializes in Honda and Acura repairs.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="staff">
-                    <button class="staff-button" type="button" data-toggle="modal" data-target="#bradyModal"><img src="http://fillmurray.com/g/200/200"></button>
-                    <h3>Brady</h3>
-                </div>
-                <div class="modal fade" id="bradyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="bradyModalLabel">Brady</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>Brady is a master tech who loves talking to customers. His specialty is Nissan repairs.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="staff" id="billStaff">
-                    <button type="button" class="staff-button" data-toggle="modal" data-target="#billModal"><img src="http://fillmurray.com/g/200/200"></button>
-                    <h3>Bill</h3>
-                </div>
-                <div class="modal fade" id="billModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="billModalLabel">Bill</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>Bill works at BAM Automotive and he has been an auto tech for more than 30 years. He specializes in Honda and Acura repairs.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
+        </div>
+    </div>
+
+    <div id="review">
+        <div class="content">
+            <div class="carousel-box">
+              <div class="review-title"><h3>What People Say About BAM Automotive</h3></div>
+              <div class="review-carousel-box">
+                <div class="review-carousel"></div>
+              </div>
+            </div>
+            <div class="review-select row">
+              <ul>
+                <li class="col-md-offset-1 col-md-2"><i class="fa fa-facebook-official"></i>Facebook</li>
+                <li class="col-md-offset-2 col-md-2"><i class="fa fa-yelp"></i>Yelp</li>
+                <li class="col-md-offset-2 col-md-2"><i class="fa fa-google"></i>Google</li>
             </div>
         </div>
     </div>
 
+    <footer>
+      <div class="content">
+        <p>Copyright: BAM Automotive 2016</p>
+      </div>
+    </footer>
+
 <script type="text/javascript" src="/vendors/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="/vendors/bootstrap/js/modal.js"></script>
+<script type="text/javascript" src="/vendors/jquery-smooth-scroll/jquery.smooth-scroll.min.js"></script>
 <script type="text/javascript" src="/assets/app.js"></script>
 
 </body>

@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -5,8 +9,17 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    flex: 1;
     font-family: "Vollkorn", serif;
     font-size: 16px;
+    position: relative;
+}
+
+footer {
+  text-align: left;
+  background-color: black;
+  color: white;
+  font-size: 12px;
 }
 
 .center {
@@ -16,7 +29,7 @@ body {
 .content {
     margin: 0 auto;
     width: 960px;
-    height: 100%;
+    min-height: 100%;
 }
 
 .clear {
@@ -49,13 +62,13 @@ body {
 #nav li {
     margin-top: 9px;
     padding-left: 21px;
-    display: inline;
-}
-
-#nav a {
     display: inline-block;
     color: white;
+}
 
+#nav li:hover {
+  cursor: pointer;
+  color: #c7151f;
 }
 
 #home, #about {
@@ -67,7 +80,7 @@ body {
     min-height: 100%;
     margin: 0 auto;
     overflow: hidden;
-    padding: 200px 0 200px 0;
+    padding: 100px 0 200px 0;
     text-align: center;
 }
 
@@ -75,7 +88,7 @@ body {
     background-color: white;
     margin: 0;
     overflow: hidden;
-    padding: 200px 0 200px 0;
+    padding: 100px 0 200px 0;
     text-align: center;
     min-height: 100%;
     width: 100%;
@@ -86,7 +99,7 @@ body {
   background-color: black;
   margin: 0;
   overflow: hidden;
-  padding: 200px 0 200px 0;
+  padding: 100px 0 200px 0;
   min-height: 100%;
   width: 100%;
   color: white;
@@ -98,11 +111,27 @@ body {
     overflow: hidden;
     min-height: 100%;
     position: relative;
+    padding: 100px 0 200px 0;
 
+}
+
+#review {
+    background-color: black;
+    margin: 0;
+    /*overflow: hidden;*/
+    height: 100%;
+    width: 100%;
+    position: relative;
+    min-height: 100%;
+    padding: 100px 0 200px 0;
 }
 
 .bam-button {
     border: 0;
+}
+
+.bam-button i {
+  color: #54aca5;
 }
 
 .home-text {
@@ -120,7 +149,7 @@ body {
   display: inline-block;
 }
 
-@keyframes slide-up {
+/*@keyframes slide-up {
     from {
         margin-top: 100%;
     }
@@ -131,8 +160,8 @@ body {
 }
 
 #find:hover + .find-box {
-  animation: slide-up 3s;
-}
+  animation: slide-up 5s;
+}*/
 
 .find-box h2 {
   font-family: "Orbitron", sans-serif;
@@ -199,9 +228,8 @@ body {
 .bottom-triangle {
   width: 0;
   height: 0;
-  border-left: 600px solid transparent;
-  border-right: 800px solid transparent;
-  border-bottom: 200px solid black;
+  border-right: 1700px solid transparent;
+  border-bottom: 300px solid black;
   position: absolute;
   bottom: 0;
 }
@@ -217,7 +245,6 @@ body {
 
 .contact-left {
     width: 45%;
-    float: left;
     padding-left: 10px;
 }
 
@@ -232,11 +259,10 @@ body {
 
 .contact-right {
     width: 45%;
-    float: right;
     background-color: #54aca5;
     position: relative;
-    margin-right: 20px;
-    padding: 20px;
+    /*margin-right: 20px;
+    padding: 20px;*/
 }
 
 .contact-right h3 {
@@ -246,9 +272,8 @@ body {
 .about-triangle {
     width: 0;
     height: 0;
-    border-left: 700px solid transparent;
-    border-right: 700px solid transparent;
-    border-top: 100px solid black;
+    border-right: 1700px solid transparent;
+    border-top: 300px solid black;
     position: absolute;
     top: 0;
 }
@@ -274,17 +299,19 @@ body {
 
 .staff-box {
     width: 100%;
+    padding-bottom: 50%;
 }
 
 .staff-box h3 {
     font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    padding-bottom: 50px;
 }
 
 .staff {
     width: 30%;
-    float: left;
-    margin: 1.5%;
     text-align: center;
+    margin: 0 auto;
 }
 
 .staff img {
@@ -305,8 +332,44 @@ body {
     padding: 0;
 }
 
+.about-triangle-bottom {
+width: 0;
+height: 0;
+border-right: 1700px solid transparent;
+border-bottom: 300px solid black;
+position: absolute;
+bottom: 0;
+}
 
+.carousel-box {
+   width: 100%;
+}
 
+.review-carousel-box {
+    width: 100%;
+    height: 220px;
+    padding: 10px;
+    text-align: center;
+}
 
+.review-title {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: "Orbitron", sans-serif;
+}
 
+.review-text {
+    color: white;
+}
 
+.review-select li {
+  display: inline-block;
+  font-size: 25px;
+  color: white;
+}
+
+.fa {
+  padding-right: 5px;
+  color: #c7151f
+}
