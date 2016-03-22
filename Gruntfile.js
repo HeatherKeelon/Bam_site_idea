@@ -11,10 +11,6 @@ module.exports = function (grunt) {
             //    src: ['client/assets/*.js'],
             //    dest: 'server/public/assets/applications.min.js'
             //}
-            //factories: {
-            //    src:['client/assets/factories/*.js'],
-            //    dest: 'server/public/assets/factories.min.js'
-            //}
         },
         copy: {
             options: {
@@ -27,11 +23,6 @@ module.exports = function (grunt) {
 
                 cwd: "node_modules/",
                 src: [
-                    "angular/angular.min.js",
-                    "angular/angular.min.js.map",
-                    "ng-parallax/js/ngParallax.min.js",
-                    "angular-scroll/angular-scroll.min.js",
-                    "angular-scroll/angular-scroll.min.js.map",
                     "jquery/dist/jquery.min.js",
                     "jquery/dist/jquery.js",
                     "bootstrap/dist/css/bootstrap.min.css",
@@ -47,7 +38,7 @@ module.exports = function (grunt) {
                 // STYLES
                 expand: true,
                 cwd: "client/styles/",
-                src: "styles.css",
+                src: "*.css",
                 "dest": "server/public/styles"
             },
 
