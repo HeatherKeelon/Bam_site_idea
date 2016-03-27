@@ -3,6 +3,10 @@
     display:none;
   }
 
+  .facebook-phone {
+    display:none;
+  }
+
   .contact-frame {
       width: 100%;
       display: inline-block;
@@ -23,6 +27,10 @@
       display: inline-block;
       /*margin-right: 20px;
       padding: 20px;*/
+  }
+
+  .facebook-phone {
+    display:block;
   }
 
   .contact-frame {

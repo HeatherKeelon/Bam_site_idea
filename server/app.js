@@ -43,7 +43,7 @@ app.use('/register', register);
 app.use('/', index);
 
 // Mongo Connection //
-var mongoURI = "mongodb://localhost:27017/bam4";
+var mongoURI = "mongodb://bam4:mazDont930291620@ds025429.mlab.com:25429/bam4";
 //var mongoURI = "";
 
 var mongoDB = mongoose.connect(mongoURI).connection;
