@@ -41,6 +41,13 @@
   .staff-photo {
     margin: 0 auto;
   }
+
+
+  .staff-box {
+      width: 100%;
+      padding-bottom: 20%;
+      margin-bottom: 50px;
+  }
 }
 
 @media (min-width:1024px) {
@@ -98,15 +105,17 @@
       margin: 0;
       padding: 0;
   }
+
+
+  .staff-box {
+      width: 100%;
+      padding-bottom: 20%;
+      margin-bottom: 0;
+  }
 }
 
 .mission h3 {
     font-family: 'Orbitron', sans-serif;
-}
-
-.staff-box {
-    width: 100%;
-    padding-bottom: 20%
 }
 
 .staff-box h3 {
