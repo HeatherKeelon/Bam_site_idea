@@ -1,10 +1,39 @@
-.contact-welcome {
-  font-family: "Orbitron", sans-serif;
+@media (min-width:320px){
+  .contact-right {
+    display:none;
+  }
+
+  .contact-frame {
+      width: 100%;
+      display: inline-block;
+      padding-left: 10px;
+  }
+
+  .contact-welcome {
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+  }
 }
 
-.contact-frame {
-    width: 100%;
-    display: inline-block;
+@media (min-width:600px){
+  .contact-right {
+      width: 45%;
+      background-color: #54aca5;
+      position: relative;
+      display: inline-block;
+      /*margin-right: 20px;
+      padding: 20px;*/
+  }
+
+  .contact-frame {
+      width: 100%;
+      display: inline-block;
+  }
+
+  .contact-welcome {
+    font-family: "Orbitron", sans-serif;
+    text-align: left;
+  }
 }
 
 .contact-left {
@@ -12,21 +41,13 @@
     padding-left: 10px;
 }
 
-#messageArea, #subject, #name, #email {
+#messageArea, #subject, #name, #email, #phone {
     width: 200%;
     margin-left: 20px;
 }
 
 .submit {
     margin-left: 20px;
-}
-
-.contact-right {
-    width: 45%;
-    background-color: #54aca5;
-    position: relative;
-    /*margin-right: 20px;
-    padding: 20px;*/
 }
 
 .contact-right h3 {

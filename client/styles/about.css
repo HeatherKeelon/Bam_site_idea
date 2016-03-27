@@ -1,48 +1,118 @@
-.about-triangle {
-    width: 0;
-    height: 0;
-    border-right: 1700px solid rgba(255, 255, 255, 0);
-    border-top: 300px solid black;
-    /*transform: rotate(0.05deg);*/
-    /*-moz-transform: scale(.9999);*/
-    position: absolute;
-    top: 0;
+@media (min-width:320px) {
+  .about-triangle {
+    display: none;
+  }
+
+  .mission {
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 50px;
+      margin-bottom: 150px;
+      text-align: center;
+      vertical-align: middle;
+  }
+
+  .mission p {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      padding: 20px;
+      font-size: 16px;
+  }
+
+  .staff {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+  }
+
+  .about-triangle-bottom {
+      display: none;
+  }
+
+  .staff-button {
+      border-radius: 50%;
+      background-color: white;
+      border: 0;
+      margin: 0 auto;
+      padding: 0;
+  }
+
+  .staff-photo {
+    margin: 0 auto;
+  }
 }
 
-.mission {
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 150px;
-    margin-bottom: 250px;
-    text-align: center;
+@media (min-width:1024px) {
+  .about-triangle {
+      width: 0;
+      height: 0;
+      border-right: 50vw solid rgba(255, 255, 255, 0);
+      border-left: 50vw solid rgba(255, 255, 255, 0);
+      border-top: 20vh solid black;
+      /*transform: rotate(0.05deg);*/
+      /*-moz-transform: scale(.9999);*/
+      position: absolute;
+      top: 0;
+      display: block;
+  }
+
+  .mission {
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 150px;
+      margin-bottom: 250px;
+      text-align: center;
+  }
+
+  .mission p {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      padding: 20px;
+      font-size: 20px;
+  }
+
+  .staff {
+      width: 30%;
+      text-align: center;
+      margin: 0 auto;
+  }
+
+  .about-triangle-bottom {
+  width: 0;
+  height: 0;
+  border-right: 50vw solid rgba(255, 255, 255, 0);
+  border-left: 50vw solid rgba(255, 255, 255, 0);
+  border-bottom: 40vh solid black;
+  /*-moz-transform: scale(.9999);
+  transform: rotate(0.05deg);*/
+  position: absolute;
+  bottom: 0;
+  display: block;
+  }
+
+  .staff-button {
+      border-radius: 50%;
+      background-color: white;
+      border: 0;
+      margin: 0;
+      padding: 0;
+  }
 }
 
 .mission h3 {
     font-family: 'Orbitron', sans-serif;
 }
 
-.mission p {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 20px;
-    font-size: 20px;
-}
-
 .staff-box {
     width: 100%;
-    padding-bottom: 50%;
+    padding-bottom: 20%
 }
 
 .staff-box h3 {
     font-family: 'Orbitron', sans-serif;
     text-align: center;
     padding-bottom: 50px;
-}
-
-.staff {
-    width: 30%;
-    text-align: center;
-    margin: 0 auto;
 }
 
 .staff img {
@@ -53,23 +123,4 @@
     position: relative;
     top: -5px;
     padding-bottom: 5px;
-}
-
-.staff-button {
-    border-radius: 50%;
-    background-color: white;
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-.about-triangle-bottom {
-width: 0;
-height: 0;
-border-right: 1700px solid rgba(255, 255, 255, 0);
-border-bottom: 300px solid black;
-/*-moz-transform: scale(.9999);
-transform: rotate(0.05deg);*/
-position: absolute;
-bottom: 0;
 }

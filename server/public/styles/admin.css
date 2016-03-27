@@ -1,0 +1,14 @@
+body {
+  background-color: white;
+}
+
+.message-div {
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 5px;
+}
+
+.delete-button {
+  padding-right: 5px;
+}

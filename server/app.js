@@ -3,15 +3,18 @@ var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
 
+var passport = require('./strategies/user');
+var session = require('express-session');
+var user = require('./routes/user');
+var index = require('./routes/index');
+
+var messages = require('./routes/messages');
+var register = require('./routes/register');
+
 
 //Mongo Setup
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-
-mongoose.connect('mongodb://localhost/bam4');
-
-mongoose.model('Message', new Schema({"message": String, "sender": String, "email": String, "subject": String}, {collection: 'bammessages'}));
-var Message = mongoose.model('Message');
 
 app.set('port', process.env.PORT || 5000);
 
@@ -19,23 +22,38 @@ app.set('port', process.env.PORT || 5000);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({expanded:true}));
 
-//New message route
-app.post('/newmessage', function(req, res){
-  var addMessage = new Message({"message": req.body.message, "sender": req.body.name, "email": req.body.email, "subject": req.body.subject});
-  console.log("You are in /newmessage");
-  addMessage.save(function(err, data){
-    if(err) console.log("Error saving message: ", err);
-    console.log("This is data: ", data);
-    res.send(data);
-  });
 
+// Passport Session Configuration //
+app.use(session({
+   secret: 'secret',
+   key: 'user',
+   resave: 'true',
+   saveUninitialized: false,
+   cookie: {maxage: 600000, secure: false}
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Routes
+app.use('/register', register);
+app.use('/user', user);
+app.use('/messages', messages);
+app.use('/register', register);
+app.use('/', index);
+
+// Mongo Connection //
+var mongoURI = "mongodb://localhost:27017/bam4";
+//var mongoURI = "";
+
+var mongoDB = mongoose.connect(mongoURI).connection;
+
+mongoDB.on('error', function(err){
+   if(err) console.log("MONGO ERROR: ", err);
 });
 
-//Inital request to server
-
-app.get('/*', function(req, res, next){
-    var file = req.params[0] || 'views/index.html';
-    res.sendFile(path.join(__dirname, './public', file));
+mongoDB.once('open', function(){
+   console.log("Connected to Mongo, meow!");
 });
 
 app.listen(app.get('port'), function(req, res){

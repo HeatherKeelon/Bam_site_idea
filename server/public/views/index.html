@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>BAM Automotive</title>
     <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css.map"/>
+    <!-- <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css.map"/> -->
     <link rel="stylesheet" href="/styles/setup.css"/>
     <link rel="stylesheet" href="/styles/header.css"/>
     <link rel="stylesheet" href="/styles/home.css"/>
@@ -37,9 +37,9 @@
 
             <div class="home-text">
             <div class="phone">
-                <button type="button" class="btn btn-default btn-lg bam-button">
+                <button type="button" class="btn btn-default btn-lg bam-button"><a href="tel:+1-952-591-5855">
                     <i class="fa fa-phone-square"></i>
-                </button>
+                </a></button>
                 <span>952-591-5855</span>
             </div>
 
@@ -101,8 +101,8 @@
       <br>
       <br>
       <div class="contact-frame row">
-          <div class="contact-left col-md-offset-1 col-md-4">
-              <form class="form-horizontal col-md-4" id="messageForm">
+          <div class="contact-left col-md-offset-1 col-md-4 col-xs-12">
+              <form class="form-horizontal col-md-4 col-xs-11" id="messageForm">
                 <div class="form-group">
                   <label for="name" class="control-label">Your Name</label>
                   <div>
@@ -113,6 +113,12 @@
                   <label for="email" class="control-label">Email</label>
                   <div>
                     <input type="email" class="form-control writing" id="email" name="email" placeholder="Email"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="control-label">Phone Number</label>
+                  <div>
+                    <input type="text" class="form-control writing" id="phone" name="phone" placeholder="Phone Number"/>
                   </div>
                 </div>
                 <div class="form-group">
@@ -160,8 +166,8 @@
             <div class="staff-box">
                 <h3>BAM Staff</h3>
                 <div class="staff-row row">
-                    <div class="staff col-md-4">
-                        <button type="button" class="staff-button" data-toggle="modal" data-target="#austinModal"><img src="http://fillmurray.com/g/200/200"></button>
+                    <div class="staff col-md-offset-3 col-md-2 col-sm-12">
+                        <button type="button" class="staff-button" data-toggle="modal" data-target="#austinModal"><img src="http://fillmurray.com/g/200/200" class="staff-photo"></button>
                         <h3 class="staff-name">Austin</h3>
                     </div>
                     <div class="modal fade" id="austinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -180,8 +186,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="staff col-md-4">
-                        <button class="staff-button" type="button" data-toggle="modal" data-target="#bradyModal"><img src="http://fillmurray.com/g/200/200"></button>
+                    <div class="staff col-md-2 col-sm-12">
+                        <button class="staff-button" type="button" data-toggle="modal" data-target="#bradyModal"><img src="http://fillmurray.com/g/200/200" class="staff-photo"></button>
                         <h3 class="staff-name">Brady</h3>
                     </div>
                     <div class="modal fade" id="bradyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -200,8 +206,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="staff col-md-4" id="billStaff">
-                        <button type="button" class="staff-button" data-toggle="modal" data-target="#billModal"><img src="http://fillmurray.com/g/200/200"></button>
+                    <div class="staff col-md-2 col-sm-12" id="billStaff">
+                        <button type="button" class="staff-button" data-toggle="modal" data-target="#billModal"><img src="http://fillmurray.com/g/200/200" class="staff-photo"></button>
                         <h3 class="staff-name">Bill</h3>
                     </div>
                     <div class="modal fade" id="billModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -226,6 +232,7 @@
     </div>
 
     <div id="review">
+      <div class="review-div">
         <div class="content">
             <div class="carousel-box">
               <div class="review-title"><h3>What People Say About BAM Automotive</h3></div>
@@ -235,18 +242,12 @@
             </div>
             <div class="review-select row">
               <ul>
-                <li class="col-md-offset-1 col-md-2"><i class="fa fa-facebook-official"></i>Facebook</li>
-                <li class="col-md-offset-2 col-md-2"><i class="fa fa-yelp"></i>Yelp</li>
-                <li class="col-md-offset-2 col-md-2"><i class="fa fa-google"></i>Google</li>
+                <li class="col-md-offset-1 col-md-2 col-xs-offset-0 col-xs-12"><a href="https://www.facebook.com/bamautomotive/reviews"><i class="fa fa-facebook-official"></i>Facebook</a></li>
+                <li class="col-md-offset-2 col-md-2 col-xs-offset-0 col-xs-12"><a href="https://www.yelp.com/writeareview/biz/lMVx_94vDb9b1yijOQnghg?return_url=%2Fbiz%2FlMVx_94vDb9b1yijOQnghg"><i class="fa fa-yelp"></i>Yelp</a></li>              <li class="col-md-offset-2 col-md-2 col-xs-offset-0 col-xs-12"><a href="https://www.google.com/#q=bam+automotive&lrd=0x52b34aaaa92b3fb7:0x7dc1253d43b49939,1,,"><i class="fa fa-google"></i>Google</a></li>
             </div>
-        </div>
+          </div>
     </div>
-
-    <footer>
-      <div class="content">
-        <p>Copyright: BAM Automotive 2016</p>
-      </div>
-    </footer>
+  </div>
 
 <script type="text/javascript" src="/vendors/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="/vendors/bootstrap/js/modal.js"></script>

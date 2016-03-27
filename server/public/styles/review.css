@@ -2,31 +2,69 @@
    width: 100%;
 }
 
-.review-carousel-box {
-    width: 100%;
-    height: 220px;
-    padding: 10px;
-    text-align: center;
+@media (min-width:320px){
+  .review-carousel-box {
+    display: none;
+  }
+
+  .review-select li {
+    display: block;
+    font-size: 25px;
+    color: white;
+    padding: 5px;
+  }
+
+  .review-title {
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-family: "Orbitron", sans-serif;
+      margin-bottom: 15%;
+  }
+
+  .review-div {
+    height: 100vh;
+  }
 }
 
-.review-title {
-    width: 100%;
-    text-align: center;
+@media (min-width:600px){
+  .carousel-box {
+    height: 220px;
+  }
+  .review-carousel-box {
+      width: 100%;
+      /*height: 220px;//issue in safari seems to be solved when you take this out, but then the box keeps resizing.*/
+      padding: 10px;
+      text-align: center;
+      display:block;
+  }
+
+  .review-select li {
+    display: inline-block;
+    font-size: 25px;
     color: white;
-    font-family: "Orbitron", sans-serif;
+    padding: 0;
+  }
+
+  .review-title {
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-family: "Orbitron", sans-serif;
+      margin-bottom: 0;
+  }
 }
 
 .review-text {
     color: white;
 }
 
-.review-select li {
-  display: inline-block;
-  font-size: 25px;
-  color: white;
-}
-
 .fa {
   padding-right: 5px;
   color: #c7151f
+}
+
+.review-select a {
+  text-decoration: none;
+  color: white;
 }
